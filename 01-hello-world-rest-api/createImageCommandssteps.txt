@@ -1,8 +1,0 @@
-agitated_nightingale
-
-docker container exec naughty_knuth ls /tmp
-docker container cp target/hello-world-rest-api.jar agitated_nightingale:/tmp	
-docker container commit agitated_nightingale in28min/hello-world-rest-api:manual1
-docker run in28min/hello-world-rest-api:manual1
-docker commit --change="CMD ["""java""", """-jar""", """/tmp/hello-world-rest-api.jar"""]" agitated_nightingale in28min/hello-world-rest-api:manual2
-docker run -p 8080:8080 in28min/hello-world-rest-api:manual2
